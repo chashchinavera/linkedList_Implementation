@@ -48,6 +48,8 @@ class DoubleLinkedList {
   }
 
   toArray() {
+    if (this.length === 0) return [];
+
     const array = [];
 
     let current = this.head;

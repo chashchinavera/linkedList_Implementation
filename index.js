@@ -113,4 +113,28 @@ class DoubleLinkedList {
 
     --this.length;
   }
+
+  insertAt(index, value) {
+    if (index < 0 || index > this.length) {
+      throw new Error("Index out of range");
+    }
+
+    if (index === 0) {
+      this.prepend(value);
+      return;
+    }
+
+    if (index === this.length) {
+      this.append(value);
+      return;
+    }
+
+    let current = this.head;
+    for (let i = 0; i < index - 1; i++) {
+      current = current.next;
+    }
+
+    current.next = new Node(value, current, current.next);
+    current.next.next.prev = current.next;
+  }
 }

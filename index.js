@@ -79,4 +79,17 @@ class DoubleLinkedList {
       current = current.prev;
     }
   }
+
+  indexOf(value) {
+    let index = 0;
+    let current = this.head;
+
+    while (current !== null) {
+      if (current.value === value) return index;
+      current = current.next;
+      ++index;
+    }
+
+    return -1;
+  }
 }

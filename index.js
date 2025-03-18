@@ -37,7 +37,6 @@ class DoubleLinkedList {
 
     this.head.prev = new Node(value, null, this.head);
     this.head = this.head.prev;
-
     this.length++;
     return this;
   }

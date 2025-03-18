@@ -92,4 +92,25 @@ class DoubleLinkedList {
 
     return -1;
   }
+
+  removeAt(index) {
+    let current = this.head;
+    for (let i = 0; i < index; i++) {
+      current = current.next;
+    }
+
+    if (current.prev) {
+      current.prev.next = current.next;
+    } else {
+      this.head = this.head.next;
+    }
+
+    if (current.next) {
+      current.next.prev = current.prev;
+    } else {
+      this.tail = this.tail.prev;
+    }
+
+    --this.length;
+  }
 }

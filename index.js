@@ -70,4 +70,13 @@ class DoubleLinkedList {
       current = current.next;
     }
   }
+
+  eachReversed(callback) {
+    let current = this.tail;
+
+    while (current !== null) {
+      callback(current.value);
+      current = current.prev;
+    }
+  }
 }

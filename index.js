@@ -94,6 +94,10 @@ class DoubleLinkedList {
   }
 
   removeAt(index) {
+    if (index < 0 || index >= this.length) {
+      throw new Error("Index out of range");
+    }
+
     let current = this.head;
     for (let i = 0; i < index; i++) {
       current = current.next;

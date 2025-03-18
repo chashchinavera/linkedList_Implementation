@@ -26,4 +26,19 @@ class DoubleLinkedList {
     this.length++;
     return this;
   }
+
+  prepend(value) {
+    if (!this.head && !this.tail) {
+      this.head = new Node(value);
+      this.tail = this.head;
+      this.length = 1;
+      return this;
+    }
+
+    this.head.prev = new Node(value, null, this.head);
+    this.head = this.head.prev;
+
+    this.length++;
+    return this;
+  }
 }

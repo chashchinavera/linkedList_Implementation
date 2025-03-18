@@ -61,4 +61,13 @@ class DoubleLinkedList {
 
     return array;
   }
+
+  each(callback) {
+    let current = this.head;
+
+    while (current !== null) {
+      callback(current.value);
+      current = current.next;
+    }
+  }
 }

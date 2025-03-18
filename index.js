@@ -46,4 +46,17 @@ class DoubleLinkedList {
       this.append(array[i]);
     }
   }
+
+  toArray() {
+    const array = [];
+
+    let current = this.head;
+
+    while (current !== null) {
+      array.push(current.value);
+      current = current.next;
+    }
+
+    return array;
+  }
 }

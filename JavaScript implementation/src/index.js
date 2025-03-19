@@ -1,4 +1,4 @@
-import DoubleLinkedList from "./DoubleLinkedList.js";
+import DoubleLinkedList from "./components/DoubleLinkedList.js";
 
 const list = new DoubleLinkedList();
 list.createFromArray([1, 2, 3, 4, 5, 6]);

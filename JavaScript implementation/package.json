@@ -1,0 +1,7 @@
+{
+    "name": "javascript_implementation",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "./javascript_implementation/src/index.js",
+    "dependencies": { }
+  }

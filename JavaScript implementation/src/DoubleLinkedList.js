@@ -1,12 +1,6 @@
-class Node {
-  constructor(value, prev = null, next = null) {
-    this.value = value;
-    this.prev = prev;
-    this.next = next;
-  }
-}
+import Node from "./Node.js";
 
-class DoubleLinkedList {
+export default class DoubleLinkedList {
   constructor() {
     this.head = null;
     this.tail = null;

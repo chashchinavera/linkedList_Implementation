@@ -140,6 +140,7 @@ class DoubleLinkedList {
 
     current.next = new Node(value, current, current.next);
     current.next.next.prev = current.next;
+    ++this.length;
   }
 
   insertAtEnd(index, value) {
